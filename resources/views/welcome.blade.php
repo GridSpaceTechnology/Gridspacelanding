@@ -39,6 +39,7 @@
                     description="AI recruitment platform helping employers hire top talent faster."
                     buttonText="Start Recruiting"
                     buttonColor="brand-orange"
+                    :url="route('coming-soon')"
                 >
                     <x-slot:icon>
                         <svg class="w-8 h-8 sm:w-10 sm:h-10 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,6 +53,7 @@
                     description="Post or join projects and collaborate with skilled professionals."
                     buttonText="Discover Projects"
                     buttonColor="brand-navy"
+                    :url="route('coming-soon')"
                 >
                     <x-slot:icon>
                         <svg class="w-8 h-8 sm:w-10 sm:h-10 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">

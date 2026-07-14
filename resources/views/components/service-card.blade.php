@@ -21,7 +21,7 @@
 
     <p class="text-brand-navy/70 text-base sm:text-lg leading-relaxed mb-8 max-w-xs">{{ $description }}</p>
 
-    <a href="{{ $url }}" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 shadow-md hover:shadow-xl border-2 {{ $isOrange ? 'text-black border-[#EB5333] bg-white hover:bg-[#EB5333] hover:text-white' : 'text-black border-[#052E5C] bg-white hover:bg-[#052E5C] hover:text-white' }}">
+    <a href="{{ $url }}" @if(str_starts_with($url, 'http')) target="_blank" rel="noopener noreferrer" @endif class="mt-auto inline-flex items-center px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 shadow-md hover:shadow-xl border-2 {{ $isOrange ? 'text-black border-[#EB5333] bg-white hover:bg-[#EB5333] hover:text-white' : 'text-black border-[#052E5C] bg-white hover:bg-[#052E5C] hover:text-white' }}">
         {{ $buttonText }}
         <svg class="w-4 h-4 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>

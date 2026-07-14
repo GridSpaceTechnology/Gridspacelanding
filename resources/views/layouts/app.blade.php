@@ -9,13 +9,28 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @else
         <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            @theme {
-                --color-brand-orange: #EB5333;
-                --color-brand-navy: #052E5C;
-                --color-brand-light: #F8F9FB;
-                --color-brand-white: #FFFFFF;
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'brand-orange': '#EB5333',
+                            'brand-navy': '#052E5C',
+                            'brand-light': '#F8F9FB',
+                            'brand-white': '#FFFFFF',
+                        },
+                        fontFamily: {
+                            sans: ['Instrument Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        },
+                    }
+                }
             }
+        </script>
+        <style>
+            html { scroll-behavior: smooth; }
         </style>
     @endif
 </head>
