@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>GridSpace</title>
+    @stack('styles')
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -32,6 +34,7 @@
         <style>
             html { scroll-behavior: smooth; }
         </style>
+        <script src="{{ asset('js/app.js') }}" defer></script>
     @endif
 </head>
 <body class="font-sans antialiased text-brand-navy bg-brand-white">
