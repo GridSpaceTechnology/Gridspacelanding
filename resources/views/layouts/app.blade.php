@@ -8,7 +8,7 @@
     @stack('styles')
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @fonts
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
     @else
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,8 @@
         <style>
             html { scroll-behavior: smooth; }
         </style>
-        <script src="{{ asset('js/app.js') }}" defer></script>
     @endif
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased text-brand-navy bg-brand-white">
 
